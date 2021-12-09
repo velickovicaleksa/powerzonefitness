@@ -129,7 +129,7 @@ $(document).ready(function() {
 	}
        else{
         document.querySelector("#ime1 > p").innerHTML-"The name is not correct";
-       document.querySelector("#name1 > p").style.color-"orange";
+       document.querySelector("#ime1 > p").style.color-"orange";
        }
       let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
         if(prezime1.test(prezimevr)){
