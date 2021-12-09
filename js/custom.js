@@ -128,23 +128,23 @@ $(document).ready(function() {
        niz.push(imevr);
 	}
        else{
-        document.querySelector("#ime1 > p").innerHTML-"The name is not correct";
-       document.querySelector("#ime1 > p").style.color-"orange";
+        document.querySelector("#ime1 p").innerHTML-"The name is not correct";
+       document.querySelector("#ime1  p").style.color-"orange";
        }
       let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
         if(prezime1.test(prezimevr)){
          niz.push(prezimevr);}
          else{
-          document.querySelector("#Lastname1 > p").innerHTML-"The last name is not correct";
-         document.querySelector("#Lastname1 > p").style.color-"orange";
+          document.querySelector("#Lastname1  p").innerHTML-"The last name is not correct";
+         document.querySelector("#Lastname1 p").style.color-"orange";
          }
   
         
         let adresa1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[\d]{1,5}$/; 
 		if(adresa1.test(emailadresavr)){
         niz.push(emailadresavr);}
-        else{document.querySelector("#email1 >p").innerHTML-"The adress is not correct ";
-		 document.querySelector("#email1 >p").style.color-"orange";
+        else{document.querySelector("#email1 p").innerHTML-"The adress is not correct ";
+		 document.querySelector("#email1 p").style.color-"orange";
         }
       }
 
