@@ -117,31 +117,34 @@ $(document).ready(function() {
     niz=[];
     ime=document.querySelector("#name");
     imevr=ime.value;
-    ime=document.querySelector("#Lastname");
+    prezime=document.querySelector("#Lastname");
     prezimevr=prezime.value;
-    ime=document.querySelector("#email");
+    emailadresa=document.querySelector("#email");
     emailadresavr=emailadresa.value;
   
     
      let ime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
       if(ime1.test(imevr)){
-       nizPodaci.push(imevr);}
+       niz.push(imevr);
+	}
        else{
-        document.querySelector("#name1 > p").innerHTML-"The name is not correct";
+        document.querySelector("#ime1 > p").innerHTML-"The name is not correct";
        document.querySelector("#name1 > p").style.color-"orange";
        }
-      let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšdž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
+      let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
         if(prezime1.test(prezimevr)){
-         nizPodaci.push(prezimevr);}
+         niz.push(prezimevr);}
          else{
           document.querySelector("#Lastname1 > p").innerHTML-"The last name is not correct";
          document.querySelector("#Lastname1 > p").style.color-"orange";
          }
   
         
-        let adresa1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[\d]{1,5}$/; if(adresa1.test(emailadresavr)){
-        nizPodaci.push(emailadresavr);}
-        else{document.querySelector("#email1 >p").innerHTML-"Adresa nije ispravno uneta"; document.querySelector("#email1 >p").style.color-"red";
+        let adresa1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[\d]{1,5}$/; 
+		if(adresa1.test(emailadresavr)){
+        niz.push(emailadresavr);}
+        else{document.querySelector("#email1 >p").innerHTML-"The adress is not correct ";
+		 document.querySelector("#email1 >p").style.color-"orange";
         }
       }
 
