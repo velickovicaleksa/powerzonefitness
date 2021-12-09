@@ -145,6 +145,7 @@ $(document).ready(function() {
         niz.push(emailadresavr);}
         else{document.querySelector("#email1 >p").innerHTML-"The adress is not correct ";
 		 document.querySelector("#email1 >p").style.color-"orange";
+		 alert("Milanko");
         }
       }
 
