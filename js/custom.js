@@ -111,7 +111,7 @@ $(document).ready(function() {
   });
 
   /* Provera imena, rpezimena i email-a*/
-  function provera(){
+  function check(){
     var ime,prezime,emailadresa;
     var imevr,prezimevr,emailadresavr;
     niz=[];
@@ -145,7 +145,6 @@ $(document).ready(function() {
         niz.push(emailadresavr);}
         else{document.querySelector("#email1 >p").innerHTML-"The adress is not correct ";
 		 document.querySelector("#email1 >p").style.color-"orange";
-		 alert("Milanko");
         }
       }
 
