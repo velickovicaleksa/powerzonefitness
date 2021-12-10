@@ -195,7 +195,8 @@ $(document).ready(function() {
                 var top = $element.offset().top;
                 var height = getHeight($element);
         
-                // Check if totally above or totally below viewport
+                // provera da li je element iznad ili spod takce gledista korisnika
+
                 if (top + height < pos || top > pos + windowHeight) {
                   return;
                 }
@@ -338,7 +339,7 @@ $(document).ready(function() {
 			var newLoc = '#' + self.getHash($link);
 
 			if(!$parent.hasClass(self.config.currentClass)) {
-				//Start callback
+				//Pocni callback
 				if(self.config.begin) {
 					self.config.begin();
 				}
@@ -346,20 +347,20 @@ $(document).ready(function() {
 				//Promeni oznacen link
 				self.adjustNav(self, $parent);
 
-				//Removing the auto-adjust on scroll
+				//otklanjanje auto-ajdusta prilikom skrola
 				self.unbindInterval();
 
 				//Skrolovanje do tacne pozicije
 				self.scrollTo(newLoc, function() {
-					//Do we need to change the hash?
+					//Do we need to change the hash? ,Znacenje hash-a upotrebljeno putem internet, tudji kod
 					if(self.config.changeHash) {
 						window.location.hash = newLoc;
 					}
 
-					//Add the auto-adjust on scroll back in
+					//auto-ajdust prilikom ponovnog skrola
 					self.bindInterval();
 
-					//End callback
+					//Zavrsi callback
 					if(self.config.end) {
 						self.config.end();
 					}
@@ -380,10 +381,11 @@ $(document).ready(function() {
 
 				//Ako nije vec ta na kojoj je korisnik trenutno
 				if(!$parent.hasClass(this.config.currentClass)) {
-					//Change the highlighted nav item
+					//Promena highlighted nav stavke
 					this.adjustNav(this, $parent);
 
-					//If there is a scrollChange callback
+					//AKo se naidje na promenu u skrolu
+
 					if(this.config.scrollChange) {
 						this.config.scrollChange($parent);
 					}
