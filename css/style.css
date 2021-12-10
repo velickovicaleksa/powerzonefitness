@@ -12,7 +12,7 @@ html,body {
   }
 
 
-
+/* Stilizovanje teksta */
 h1,h2,h3,h4,h5,h6,
 blockquote {
   font-weight: 600;
@@ -67,7 +67,7 @@ a {
   outline: none;
 }
 
-
+/*Generalni stil */
 #trainer,
 #blog,
 #price {
@@ -89,7 +89,7 @@ a {
   background-size: cover !important;
 }
 
-
+/* Sekcija Za preloader*/
 
 .preloader {
   position: fixed;
@@ -134,7 +134,7 @@ a {
 
 
 
-
+/* Navigacija*/
 .navbar-default {
     background: #ffffff;
     border-bottom: 2px solid #f9f9f9;
@@ -196,7 +196,7 @@ a {
 }
 
 
-
+/* Home sekcija */
 
 #home {
     background: 50% 0 repeat-y fixed;
@@ -238,7 +238,7 @@ a {
 }
 
 
-
+/*O nama sekcija */
 
 #overview {
   padding-top: 14rem;
@@ -288,7 +288,7 @@ a {
 }
 
 
-
+/* Trener sekcija */
 
 #trainer {
   background: #f2f2f2;
@@ -347,7 +347,7 @@ a {
 
 
 
-
+/* Sekcija forme */
 #newsletter {
     background: url('../images/newsletter-bg.jpg') 50% 0 repeat-y fixed;
     background-size: cover;
@@ -397,7 +397,7 @@ a {
   color: #26253a;
 }
 
-
+/* Sekcija blog kartica */
 
 #blog{
   background-color: #f2f2f2;
@@ -446,7 +446,7 @@ a {
   letter-spacing: 1px;
 }
 
-
+/* Sekcija o cenama */
 #price {
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url('../images/price-bg.jpg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
@@ -576,7 +576,7 @@ a {
 #price .pricing__action:focus {
   background: #222;
 }
-
+/* responsive*/
 @media screen and (max-width: 60em) {
   #price .pricing__item {
     max-width: none;
@@ -590,7 +590,7 @@ a {
 
 
 
-
+/* sekcija o izrazima */
 #testimonial {
     background: #ffffff;
     color: #26253a;
@@ -608,7 +608,7 @@ a {
 }
 
 
-
+/*footer*/
 
 footer {
   background: #26253a;
@@ -813,10 +813,6 @@ footer .copyright-text {
   }
 
 }
-
-
-
-
 
 /*Animacije*/
 

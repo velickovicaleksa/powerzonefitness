@@ -13,7 +13,7 @@ $(document).ready(function() {
   /* navigacija
   -----------------------------------------------*/
  $('.main-navigation').onePageNav({
-        scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
+        scrollThreshold: 0.2, //  threshold js kao i njegovo znacenje je iskopirano putem interneta
         scrollOffset: 75, //Visina navigacionog bara
         filter: ':not(.external)',
         changeHash: true
@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
 
 
- /* Sekcija za poomeranje objekata
+ /* Sekcija za poomeranje objekata iz ugla korisnika
     -----------------------------------------------*/
   function initParallax() {
     $('#home').parallax("100%", 0.1);
@@ -123,31 +123,31 @@ $(document).ready(function() {
     emailadresavr=emailadresa.value;
   
     
-     let ime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
+     let ime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
       if(ime1.test(imevr)){
        niz.push(imevr);
 	}
        else{
-        document.querySelector("#ime1 p").innerHTML-"The name is not correct";
-       document.querySelector("#ime1  p").style.color-"orange";
+        document.querySelector(".col-md-6  p").innerHTML-"The name is not correct";
+       document.querySelector(".col-md-6   p").style.color-"orange";
        }
-      let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
+      let prezime1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/;
         if(prezime1.test(prezimevr)){
          niz.push(prezimevr);}
          else{
-          document.querySelector("#Lastname1  p").innerHTML-"The last name is not correct";
-         document.querySelector("#Lastname1 p").style.color-"orange";
+          document.querySelector(".col-md-6  p").innerHTML-"The last name is not correct";
+         document.querySelector(".col-md-6  p").style.color-"orange";
          }
   
         
         let adresa1=/^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[\d]{1,5}$/; 
 		if(adresa1.test(emailadresavr)){
         niz.push(emailadresavr);}
-        else{document.querySelector("#email1 p").innerHTML-"The adress is not correct ";
-		 document.querySelector("#email1 p").style.color-"orange";
+        else{document.querySelector(".col-md-6 p ").innerHTML-"The adress is not correct ";
+		 document.querySelector(".col-md-6 p").style.color-"orange";
         }
       }
-
+	 
 
       (function( $ ){
         var $window = $(window);
@@ -226,7 +226,7 @@ $(document).ready(function() {
 		this.docHeight = this.$doc.height();
 	};
 
-	// the plugin prototype
+	// prototip kao i ovaj konstruktor su iskucani pomocu interneta
 	OnePageNav.prototype = {
 		defaults: {
 			navItems: 'a',
@@ -242,12 +242,11 @@ $(document).ready(function() {
 		},
 
 		init: function() {
-			// Introduce defaults that can be extended either
-			// globally or using an object literal.
+			//tudji kod
 			this.config = $.extend({}, this.defaults, this.options, this.metadata);
 
 			this.$nav = this.$elem.find(this.config.navItems);
-
+			//zavrsetak tudjeg koda
 			//FIltriraju se linkovi izvan nav-a
 			if(this.config.filter !== '') {
 				this.$nav = this.$nav.filter(this.config.filter);
